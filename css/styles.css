@@ -173,12 +173,14 @@ align-items: center;
 
 /* пвсстояние между картинкой и текстом */
 .header-icon-link {
+  fill: var(--main-text-color-gray);
   margin-right: 10px;
   /* padding: 10px; */
 }
 
 
 .container .up-phone-email-style {
+  fill: var(--main-text-color-gray);
   margin-left: auto;
 }
 
@@ -213,6 +215,7 @@ margin-bottom: 30px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  padding-left: 0;
   /* padding-top: 32px;
   padding-bottom: 32px; */
   /* border-bottom: 30;
@@ -228,6 +231,7 @@ margin-bottom: 30px;
 
 .index-list .our-margin{
   margin-right: 30px;
+  /* padding-left: 0; */
 }
 
 /* промежуток между заголовком и подписью */
@@ -317,7 +321,8 @@ margin-bottom: 30px;
 /* FOOTER */
 .bg-color-footer .container { 
   display: flex;
-
+  align-items: baseline;
+  /* padding: 60px 0px; */
   /* padding-top: 32px;
   padding-bottom: 32px; */
   /* border-bottom: 30;
@@ -327,12 +332,6 @@ margin-bottom: 30px;
 .container .logo-margin {
   margin-bottom: 20px;
 }
-
-.bg-color-footer .container{
-  padding: 60px 0px;
-  margin-right: 70px;
-}
-
 
 /* Страница Портфолио */
 /* main */
@@ -472,6 +471,9 @@ margin-bottom: 30px;
 /* Расстояние между иконками */
 .social-icons-item-margin {
   margin-right: 10px;
+  margin-top: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* Параметры иконок соцсетей Нашей команды */
@@ -547,25 +549,26 @@ margin-bottom: 30px;
   width: 100%;
 }
 
+/* Настройка блока адрес в футере, размера и расположения */
 .footer-text-color .container .footer-address {
 display: flex;
 flex-direction: column;
 align-items:flex-start;
-padding-left: 30px;
-}
-
-/* Настройка блока адрес в футере, размера и расположения */
-.footer-text-color .container .footer-address {
-  width: 270px;
-  float: left;
-  margin-right: 70px;
+/* padding-left: 30px; */
+padding-top: 60px;
+padding-bottom: 60px;
+margin-right: 70px;
+padding-left: 0;
 }
 
 /* Настройки блока соцсетей в футере, размера и расположения */
 .footer-text-color .container .footer-soc {
-width: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  padding-top: 75px;
+padding-bottom: 97px;
 margin-right: 93px;
-/* float:right; */
 }
 
 .list-item-portfolio .link:hover,
@@ -664,6 +667,7 @@ margin-right: 93px;
   align-items: center;
   width: 170px;
   height: 90px;
+  border: 1px;
   border-radius: 4%;
   border-style: solid;
   border-color: var(--icon-color-gray);
@@ -906,8 +910,8 @@ color: var(--main-text-color-gray);
 }
 
 /* Client стилизация текста*/
-.h3-style-client {
-font-weight: 900;
+.h2-style-client {
+font-weight: 700;
 font-size: 36px;
 line-height: 1.16;
 text-align: center;
@@ -925,7 +929,7 @@ margin-top: 0;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  
+  margin: 0;
   color: var(--main-text-color-white);
   }
 
@@ -990,6 +994,8 @@ cursor: pointer;
 .portfolio-buttom.link:focus {
   background-color: var(--main-text-color-blue); /*изменение цвета кнопни*/
   color: var(--main-text-color-white);  /*изменение цвета надписи*/
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
   /* cursor: pointer; */
 }
 
