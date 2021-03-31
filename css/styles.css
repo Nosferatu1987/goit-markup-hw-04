@@ -33,6 +33,7 @@
   --main-text-color-blue: #2196F3;
   --main-text-color-white: #FFFFFF;
   --bg-color-gray: #2f303a;
+  --bg-header-line: #ECECEC;
   --border-color: #EEEEEE;
   --bg-color-team: #F5F4FA;
   --grid-item: 1;
@@ -85,7 +86,7 @@ html {
 /* ВЫРАВНИВАНИЕ */
 
 /* Сброс стилей */
-/* h1,
+h1,
 h2,
 h3,
 h4,
@@ -95,7 +96,7 @@ p,
 ul
  {
   margin: 0;
-} */
+}
 
 
 .section {
@@ -124,12 +125,11 @@ ul
 }
 
 .header {
-  border-bottom: 1px solid var(--bg-color-gray);
+  border-bottom: 1px solid var(--bg-header-line);
 /* или */
 /* border-width: 1px;
 border-style: solid;
 border-color: var(--main-text-color-gray); */
-
 }
 
 /* Центровка контактов */
@@ -145,6 +145,7 @@ align-items: center;
 .nav-contacts
  {
   display: inline-flex;
+  padding-left: 0;
 }
 
 /* отступ для логотипа */
@@ -189,7 +190,7 @@ align-items: center;
 .container .h1-style {
   /* position: absolute; */
 width: 696px;
-height: 120px;
+/* height: 120px; */
 margin: 0 auto;
 text-align: center;
 margin-bottom: 30px;
@@ -329,7 +330,8 @@ margin-bottom: 30px;
   border-color: var(--main-text-color-gray); */
 }
 
-.container .logo-margin {
+.container .footer-address .logo-margin {
+  display:block;
   margin-bottom: 20px;
 }
 
@@ -340,6 +342,8 @@ margin-bottom: 30px;
   justify-content:center;
   align-items: center;
   margin-bottom: 50px;
+  margin-left: 0;
+  padding-left: 0;
   /* padding-top: 32px;
   padding-bottom: 32px; */
   /* border-bottom: 30;
@@ -443,6 +447,7 @@ margin-bottom: 30px;
   display: inline-flex;
   /* margin: 0 auto; */
   padding: 0 0 0 2px;
+
 }
 
 /* Выделение цветом иконок соцсетей нашей команды. Ховер и фокус задается всегда на ссылку! */
@@ -520,7 +525,7 @@ margin-bottom: 30px;
 
 /* отступы между списками в футере */
 .down-menue-address-style .list .li-footer-first {
-  margin-bottom: 6px;
+  margin-bottom: 9px;
   /* margin-top: 9px; */
   /* padding-bottom: 6px;
   padding-top: 9px; */
@@ -549,16 +554,20 @@ margin-bottom: 30px;
   width: 100%;
 }
 
+.footer-text-color .container {
+  padding: 60px 0;
+}
+
 /* Настройка блока адрес в футере, размера и расположения */
 .footer-text-color .container .footer-address {
-display: flex;
+/* display: flex;
 flex-direction: column;
-align-items:flex-start;
+align-items:flex-start; */
 /* padding-left: 30px; */
-padding-top: 60px;
-padding-bottom: 60px;
+/* padding-top: 60px;
+padding-bottom: 60px; */
 margin-right: 70px;
-padding-left: 0;
+/* padding-left: 0; */
 }
 
 /* Настройки блока соцсетей в футере, размера и расположения */
@@ -566,8 +575,8 @@ padding-left: 0;
   display: flex;
   flex-direction: column;
   align-items:flex-start;
-  padding-top: 75px;
-padding-bottom: 97px;
+  /* padding-top: 75px;
+padding-bottom: 97px; */
 margin-right: 93px;
 }
 
@@ -672,6 +681,10 @@ margin-right: 93px;
   border-style: solid;
   border-color: var(--icon-color-gray);
   
+}
+
+.footer-soc .footer-h3-come {
+  margin-bottom: 20px;
 }
 
 
@@ -1021,30 +1034,37 @@ cursor: pointer;
 }
 
 .bg-color-up {
-  display: flex;  /*работает вместе с align-items*/
-  align-items: center;  /*вертикальное выравнивание*/
+
+background-color: var(--bg-color-gray);
+text-align: center;
+padding-top: 200px;
+padding-bottom: 200px;
+max-width: 1600px;   /*максимальная длинна банера*/
+height: 600px;
+margin-left: auto;
+margin-right: auto;
+background-image: url(../images/index/bg-Img-overlay.png), url(../images/index/bg-header-Img.png);
+/* background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/index/bg-header-Img.png); */
+background-position: center;
+background-repeat: no-repeat;
+object-fit: cover;  /*задаем отображение картинки-фона (стоять на месте и т.д.);/
+/* центр всегда на месте */
+background-position: center;
+/* можно задать ысоту банера, убирая паддинги, но тогда могут возникнуть баги с переполнением */
+
+  /* display: flex;*/  /*работает вместе с align-items*/
+  /*align-items: center;*/  /*вертикальное выравнивание*/
   /* justify-content: center;  горизонтальное выравнивание */ 
   /* Банер всегда подстраивается под экран */
   /* height: 100vh;  */
-  max-width: 1600px;   /*максимальная длинна банера*/
 /* position: absolute; */
 /* width: 1600px; */
 /* height: 600px; */
 /* left: 0px; */
 /* top: 80px; */
 /* padding: 250px 0; */
-background-color: var(--bg-color-gray);
-background-image: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/index/bg-header-Img.png);
-/* background-color: ; */
-background-repeat: no-repeat;
-object-fit: cover;  /*задаем отображение картинки-фона (стоять на месте и т.д.);/
 /* object-position: 50% 50%; */
-margin-left: auto;
-margin-right: auto;
-padding: 200px 0; 
-/* центр всегда на месте */
-background-position: center;
-/* можно задать ысоту банера, убирая паддинги, но тогда могут возникнуть баги с переполнением */
+/* padding: 200px 0;  */
 }
 
 .bg-color-team {
